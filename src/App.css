@@ -1,93 +1,115 @@
-*{
+* {
   box-sizing: border-box;
 }
-body{
-  background-color: #17181f;
+
+body {
+  background-color: #1e1e2f; /* Darker background for better contrast */
   color: #ddd;
 }
-main{
+
+main {
   max-width: 360px;
   margin: 30px auto;
+  padding: 20px; /* Added padding for better spacing */
+  border-radius: 10px; /* Rounded corners for a softer look */
+  background-color: #252536; /* Lightened main background */
 }
 
-h1{
+h1 {
   text-align: center;
-  color: #fff;
+  color: #f0f0f0; /* Softer white */
   margin: 0;
   font-size: 2.5rem;
 }
-h1 span{
+
+h1 span {
   font-size: 1rem;
   vertical-align: top;
   display: inline-block;
   margin-top: 6px;
 }
 
-form{
+form {
   margin-top: 20px;
 }
 
-form input{
+form input {
   width: 100%;
   background-color: transparent;
-  color:#ddd;
-  border: 2px solid #30313d;
-  padding: 2px 5px;
+  color: #ddd;
+  border: 2px solid #444; /* Softer border color */
+  padding: 10px; /* Increased padding for comfort */
   border-radius: 5px;
 }
-form input[type="datetime-local"]{
-  color:#777;
+
+form input[type="datetime-local"] {
+  color: #aaa; /* Softer text color for datetime input */
 }
-form div.basic{
+
+form div.basic {
   display: flex;
   gap: 5px;
   margin-bottom: 5px;
 }
 
-form button{
+form button {
   width: 100%;
-  margin-top: 5px;
-  border: 0;
+  height: 40px; /* Increased height for better usability */
+  margin-top: 15px;
+  border: none; /* Removed border for a cleaner look */
   border-radius: 5px;
-  background-color: #ddd;
+  background-color: #4a90e2; /* Softer blue color */
+  color: #fff; /* White text for contrast */
+  font-weight: bold; /* Bold text for emphasis */
+  
+   transition: background-color .3s ease, box-shadow .3s ease; /* Smooth transition effect */
 }
 
-div.transactions{
-  margin-top: 10px;
+button:hover {
+   background-color: #357ab8; /* Darker blue on hover */
+   box-shadow: 
+      0 0 5px rgba(74,144,226,0.5),   
+      0 0 15px rgba(74,144,226,0.7);   
+} 
+
+div.transactions {
+   margin-top: 10px;
 }
 
-div.transaction{
-  display: flex;
-  justify-content: space-between;
-  padding: 5px 0;
-  border-top: 1px solid #30313d;
-}
-div.transaction:first-child{
-  border-top:0;
+div.transaction {
+   display: flex;
+   justify-content: space-between;
+   padding: 10px; /* Increased padding for comfort */
+   border-top: 1px solid #444; /* Softer line color */
 }
 
-div.transaction div.name{
-  font-size: 1rem;
+div.transaction:first-child {
+   border-top: none; 
 }
 
-div.transaction div.description{
-  font-size: 0.7rem;
-  color: #888;
+div.transaction div.name {
+   font-size: 1rem;
+   font-weight: bold; /* Emphasizing transaction name */
 }
 
-div.right{
-  text-align: right;
+div.transaction div.description {
+   font-size: .8rem; /* Slightly larger description text */
+   color: #aaa; /* Softer description color */
 }
 
-div.price.red{
-  color: #c11;
-}
-div.price.green{
-  color: #1c1;
+div.right {
+   text-align: right;
 }
 
-div.transaction div.datetime{
-  font-size: 0.7rem;
-  color: #888;
+div.price.red {
+   color: #ff4d4d; /* Softer red for negative values */
 }
 
+div.price.green {
+   color: #4caf50; /* Softer green for positive values */
+}
+
+div.transaction div.datetime {
+   font-size:.7rem;
+   color:#aaa; /* Softer datetime color */
+}
